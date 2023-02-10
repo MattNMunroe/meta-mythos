@@ -20,3 +20,5 @@ const handleOnChange = (event) => {
         </div>
     )
 }
+
+export default SearchBar

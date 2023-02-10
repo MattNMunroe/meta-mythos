@@ -17,3 +17,5 @@ const filteredDeity = deity.filter((deity, index ) => {
         </div>
     )
 }
+
+export default Deity
