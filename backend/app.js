@@ -9,6 +9,7 @@ const app = express();
 //MIDWARE
 app.use(cors());
 app.use(express.json());
+// app.use("/deities",)
 
 //ROUTES
 app.get("/", (req, res) => {
