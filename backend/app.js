@@ -2,6 +2,7 @@
 
 const express = require("express");
 const cors = require("cors");
+const deityController = require("./controllers/deityController");
 
 //CONFIG
 const app = express();
@@ -9,7 +10,7 @@ const app = express();
 //MIDWARE
 app.use(cors());
 app.use(express.json());
-// app.use("/deities",)
+app.use("/deities", deityController);
 
 //ROUTES
 app.get("/", (req, res) => {

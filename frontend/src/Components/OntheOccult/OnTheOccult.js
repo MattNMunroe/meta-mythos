@@ -7,7 +7,7 @@ const OnTheOccult = () => {
             <break></break>
             <h3>Just what is the "Occult"? What's it mean, and stand for?</h3>
             <p>This word, when heard by many, strikes a sort of metaphysical fear into their spiritual well-beings. Being associated with things such as the "Evil Eye", Voodoo, Bruerja, and many other "darker" practices, people tend to stray away from the wealth of knowledge tucked away in these traditions.</p>
-            <p>"Occult" simply means "Hidden". Hidden Knowledge, to be exact. Elements of psychology and mysticism that is used to explain natural phenomenon. There's nothing inherently "evil" about the ways the brain works, and how ancient peoples used these workings to explain the very elements around them.</p>
+            <p>"Occult" simply means "Hidden". Elements of psychology and mysticism that have been used to explain natural phenomenon since the earliest periods of humanity. There's nothing inherently "evil" about it. With the right eye, it can be seen as a well of creativity and history. Commonalities also begin to present themselves in the everyday aspects of our world! The word "Horizon" or comes from Horus {"(Horus-Zone)"}, the Egyptian Sun God, for instance.</p>
             <break></break>
             <h3>So how can this Mythos help expel any fears?</h3>
             <p>A great man once said, "One who knows nothing, can understand nothing." - Ansem, Seeker of Darkness.</p>

@@ -9,7 +9,7 @@ const {
   createDeity,
   updateDeity,
 } = require("../queries/deity");
-const { all } = require("../app");
+// const { all } = require("../app");
 //controller is needed to have deity popup in backend/postman
 
 //INDEX

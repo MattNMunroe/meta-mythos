@@ -34,7 +34,7 @@ const deleteDeity = async (id) => {
 const createDeity = async ({ name, description, tradition, reference }) => {
   try {
     const newDeity = await db.one(
-      "INSERT INTO myths (name, description, tradition, reference) VALUES($1, $2. $3, $4) RETURNING *",
+      "INSERT INTO myths (name, description, tradition, reference) VALUES ($1, $2. $3, $4) RETURNING *",
       [name, description, tradition, reference]
     );
     return newDeity;
