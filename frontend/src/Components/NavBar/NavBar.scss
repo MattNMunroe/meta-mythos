@@ -1,0 +1,8 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  column-gap: 5px;
+}

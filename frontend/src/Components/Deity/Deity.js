@@ -8,6 +8,7 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const Deity = (props) => {
   const [deity, setDeity] = useState([]);
+  const [searched, setSearched] = useState([])
 
   useEffect(() => {
     axios
