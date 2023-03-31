@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import axios from 'axios';
 import NavBar from './Components/navbar/NavBar'
-// import SearchBar from './Components/SearchBar/SearchBar'
+import SearchBar from './Components/SearchBar/SearchBar'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
 import Deity from './Components/Deity/Deity'

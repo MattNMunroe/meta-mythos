@@ -21,7 +21,7 @@ const getDeity = async (id) => {
 const deleteDeity = async (id) => {
   try {
     const oneDeity = await db.one(
-      "DELETE FROM users WHERE id=$1 RETURNING *",
+      "DELETE FROM myths WHERE id=$1 RETURNING *",
       id
     );
     return oneDeity;
@@ -31,11 +31,11 @@ const deleteDeity = async (id) => {
   }
 };
 
-const createDeity = async ({ name, description, tradition, reference }) => {
+const createDeity = async ({ name, description, tradition, references }) => {
   try {
     const newDeity = await db.one(
-      "INSERT INTO myths (name, description, tradition, reference) VALUES ($1, $2. $3, $4) RETURNING *",
-      [name, description, tradition, reference]
+      "INSERT INTO myths (name, description, tradition, references) VALUES ($1, $2. $3, $4) RETURNING *",
+      [name, description, tradition, references]
     );
     return newDeity;
   } catch (error) {
@@ -43,11 +43,11 @@ const createDeity = async ({ name, description, tradition, reference }) => {
   }
 };
 
-const updateDeity = async (id, { name, description, tradition, reference }) => {
+const updateDeity = async (id, { name, description, tradition, references }) => {
   try {
     const updateDeity = await db.one(
-      "UPDATE myths SET name=$1, description=$2, tradition=$3, reference=$4 where id=$5 RETURNING *",
-      [name, description, tradition, reference]
+      "UPDATE myths SET name=$1, description=$2, tradition=$3, references=$4 where id=$5 RETURNING *",
+      [name, description, tradition, references]
     );
     return updateDeity;
   } catch (error) {

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 
-const SearchBar = (handleSearch) => {
+const SearchBar = (props) => {
 const [input, setInput] = useState("")
 
 const handleOnChange = (event) => {
@@ -16,7 +16,7 @@ const handleOnChange = (event) => {
             onChange={handleOnChange}
             placeholder='Whom Do You Seek...'
             />
-            <button onClick={() => handleSearch(input)}>Submit</button>
+            <button onClick={() => props.handleSearch(input)}>Submit</button>
         </div>
     )
 }

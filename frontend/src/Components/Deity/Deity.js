@@ -1,11 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SearchBar from "../SearchBar/SearchBar";
 // const API = process.env.REACT_APP_API_URL;
 
 //import from backend
 
-const Deity = () => {
+const Deity = (props) => {
   const [deity, setDeity] = useState([]);
 
   useEffect(() => {
@@ -29,10 +30,14 @@ const Deity = () => {
 
   return (
     <div>
+        <SearchBar deity={deity} handleSearch={handleSearch} />
       {deity.map((deity, index) => {
         return (
           <div key={index}>
             <h1>Name: {deity.name}</h1>
+            <h3>{deity.description}</h3>
+            <h4>{deity.tradition}</h4>
+            <h6>{deity.references}</h6>
           </div>
         );
       })}

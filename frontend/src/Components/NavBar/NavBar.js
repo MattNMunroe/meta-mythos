@@ -12,6 +12,11 @@ const Nav = () => {
                 About
             </Link>
         </div>
+        <div>
+            <Link className="deities" to='/deities'>
+                Deity Guide
+            </Link>
+        </div>
     </nav>
     )
 }
