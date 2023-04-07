@@ -7,32 +7,38 @@ import SearchBar from "../SearchBar/SearchBar";
 //import from backend
 
 const Deity = (props) => {
-  const [deity, setDeity] = useState([]);
-  const [searched, setSearched] = useState([])
+  const [deities, setDeities] = useState([]);  //original list
+  const [searched, setSearched] = useState([]) //list of searched deities
 
   useEffect(() => {
     axios
       .get("http://localhost:3001/deities")
       .then((response) => {
-        setDeity(response.data.payload);
+        setDeities(response.data.payload);
+        setSearched(response.data.payload)
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  console.log(deity);
+  console.log(deities);
 
   const handleSearch = (search) => {
-    const filteredDeity = deity.filter((deity, index) => {
+    const filteredDeity = deities.filter((deity, index) => {
       return deity.name.toLowerCase() === search.toLowerCase();
     });
-    setDeity(filteredDeity);
-  };
+    console.log(search, filteredDeity)
+    if (filteredDeity.length === 0) {
+        setSearched(deities)
+    } else {
+    setSearched(filteredDeity);
+  }};
+
 
   return (
     <div>
-        <SearchBar deity={deity} handleSearch={handleSearch} />
-      {deity.map((deity, index) => {
+        <SearchBar deity={deities} handleSearch={handleSearch}/>
+      {searched.map((deity, index) => {
         return (
           <div key={index}>
             <h1>Name: {deity.name}</h1>
